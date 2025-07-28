@@ -5,21 +5,21 @@
 class Logbasset < Formula
   desc "LogBasset - A tool for querying and tailing logs"
   homepage "https://github.com/andreagrandi/logbasset"
-  version "0.3.0"
+  version "0.4.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/andreagrandi/logbasset/releases/download/v0.3.0/logbasset_Darwin_x86_64.tar.gz"
-      sha256 "f0904b4d36769d1978b4c3ccff5e8aea1ea9769bc4f3331b5f22b2017533fa90"
+      url "https://github.com/andreagrandi/logbasset/releases/download/v0.4.1/logbasset_Darwin_x86_64.tar.gz"
+      sha256 "91bd6721590f782c23e482c7c99f76d6d23c3047406a8f432c580c666d6f6241"
 
       def install
         bin.install "logbasset"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/andreagrandi/logbasset/releases/download/v0.3.0/logbasset_Darwin_arm64.tar.gz"
-      sha256 "a0e935adca4d85d3b8a8815c99f18f372a60ea4b95b62a8eed1a06ccfe2c88a1"
+      url "https://github.com/andreagrandi/logbasset/releases/download/v0.4.1/logbasset_Darwin_arm64.tar.gz"
+      sha256 "ec2a38b9be9e0a11ab0028da075f6796df841938a199782815f17421fc0b7911"
 
       def install
         bin.install "logbasset"
@@ -29,15 +29,15 @@ class Logbasset < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/andreagrandi/logbasset/releases/download/v0.3.0/logbasset_Linux_x86_64.tar.gz"
-      sha256 "880ac9c6f71e672242373c1f7e147e7474d56862158a945a20e90e39b49f1007"
+      url "https://github.com/andreagrandi/logbasset/releases/download/v0.4.1/logbasset_Linux_x86_64.tar.gz"
+      sha256 "483ded0557919aaa5c73e737d536603e0913e1e349c81b9e06e8d28bac35db1b"
       def install
         bin.install "logbasset"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/andreagrandi/logbasset/releases/download/v0.3.0/logbasset_Linux_arm64.tar.gz"
-      sha256 "b8e0f122221b1efaf8514c2ac82ba8568f17b00072613a68380a4d85e905bc5f"
+      url "https://github.com/andreagrandi/logbasset/releases/download/v0.4.1/logbasset_Linux_arm64.tar.gz"
+      sha256 "928513e7005de2cae27744ab41735b3efb92612de8bcc3f1444259532fecf5ff"
       def install
         bin.install "logbasset"
       end
