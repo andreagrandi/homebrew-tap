@@ -5,21 +5,21 @@
 class Logbasset < Formula
   desc "LogBasset - A tool for querying and tailing logs"
   homepage "https://github.com/andreagrandi/logbasset"
-  version "0.4.2"
+  version "0.4.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/andreagrandi/logbasset/releases/download/v0.4.2/logbasset_Darwin_x86_64.tar.gz"
-      sha256 "027da6e8e9f82f45509f962bb1c0805b3e871a9947a2a132857ac12fa6edd219"
+      url "https://github.com/andreagrandi/logbasset/releases/download/v0.4.3/logbasset_Darwin_x86_64.tar.gz"
+      sha256 "1da2cef456f7b4889b4b1612592c92aeb8b903f073f3312106782b6ed8c72adf"
 
       def install
         bin.install "logbasset"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/andreagrandi/logbasset/releases/download/v0.4.2/logbasset_Darwin_arm64.tar.gz"
-      sha256 "4f916390e87ae3eed0cb50b4a74f698cfe8ca1cae1849df5cd1a6c321b65601d"
+      url "https://github.com/andreagrandi/logbasset/releases/download/v0.4.3/logbasset_Darwin_arm64.tar.gz"
+      sha256 "17434b327b0dab4533b2fe5a9ae1e22cb1f93bbd61fcf4101316d341d525392b"
 
       def install
         bin.install "logbasset"
@@ -28,16 +28,16 @@ class Logbasset < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/andreagrandi/logbasset/releases/download/v0.4.2/logbasset_Linux_x86_64.tar.gz"
-      sha256 "a927c404632b12ee31be5c63be4d985dbddb131bb968d9089e8e579d4f69e4b0"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/andreagrandi/logbasset/releases/download/v0.4.3/logbasset_Linux_x86_64.tar.gz"
+      sha256 "5acf30adfa20f4b52ad45f7dbfc3f13e023a97fca988ba9bde04e446b9969624"
       def install
         bin.install "logbasset"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/andreagrandi/logbasset/releases/download/v0.4.2/logbasset_Linux_arm64.tar.gz"
-      sha256 "adcc10fe9602a6046b803594c40bd3839408d54d256d071d54fd6d047ed9f25e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/andreagrandi/logbasset/releases/download/v0.4.3/logbasset_Linux_arm64.tar.gz"
+      sha256 "9163c468f217774c8bb82751c7db2c244d41c2eacf00e856b08afce4357b500e"
       def install
         bin.install "logbasset"
       end
