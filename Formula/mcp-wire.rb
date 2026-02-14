@@ -5,21 +5,21 @@
 class McpWire < Formula
   desc "Install and configure MCP servers across AI coding tools"
   homepage "https://github.com/andreagrandi/mcp-wire"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/andreagrandi/mcp-wire/releases/download/v0.1.2/mcp-wire_Darwin_x86_64.tar.gz"
-      sha256 "e3994f679290618b7aa1c85b272cbd3ee897d3075c66af539bae840ae2d45e16"
+      url "https://github.com/andreagrandi/mcp-wire/releases/download/v0.1.3/mcp-wire_Darwin_x86_64.tar.gz"
+      sha256 "5ad3f38020ad6a428d76d5e1beec3ad8ba5acf17131b9b5ba5a50163585c6abf"
 
       def install
         bin.install "mcp-wire"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/andreagrandi/mcp-wire/releases/download/v0.1.2/mcp-wire_Darwin_arm64.tar.gz"
-      sha256 "33595f14c36d092e2a04028ec7b7decf87c1253bd264f25ecd35b747a237030e"
+      url "https://github.com/andreagrandi/mcp-wire/releases/download/v0.1.3/mcp-wire_Darwin_arm64.tar.gz"
+      sha256 "49663897a2808cf022b848cfb447e719c14e3e595b99465b270c49ea11dcf10e"
 
       def install
         bin.install "mcp-wire"
@@ -29,15 +29,15 @@ class McpWire < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/andreagrandi/mcp-wire/releases/download/v0.1.2/mcp-wire_Linux_x86_64.tar.gz"
-      sha256 "ef6ade08709d83a0eb93c22f46d816359ac7e4480ab7528f9744e4f88b96efb7"
+      url "https://github.com/andreagrandi/mcp-wire/releases/download/v0.1.3/mcp-wire_Linux_x86_64.tar.gz"
+      sha256 "b8e26660c0da46a500a83599c2db2b285833a821c07104c9ae4e663214cd114b"
       def install
         bin.install "mcp-wire"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/andreagrandi/mcp-wire/releases/download/v0.1.2/mcp-wire_Linux_arm64.tar.gz"
-      sha256 "57a3481ef53b57aaef15444b01e087650e84b5d104ae5f5f06c21229238c0eee"
+      url "https://github.com/andreagrandi/mcp-wire/releases/download/v0.1.3/mcp-wire_Linux_arm64.tar.gz"
+      sha256 "5c6e597fd222bef47815f7316186d8ef25921ac1b9344155e1b10837e0319902"
       def install
         bin.install "mcp-wire"
       end
