@@ -5,21 +5,21 @@
 class MbCli < Formula
   desc "mb-cli - A read-only CLI for the Metabase API"
   homepage "https://github.com/andreagrandi/mb-cli"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/andreagrandi/mb-cli/releases/download/v0.1.1/mb-cli_Darwin_x86_64.tar.gz"
-      sha256 "2e7c5d64e24227cd043c96434a945b2f8c0d2113b47f473c1dfd55f06e0b5ef5"
+      url "https://github.com/andreagrandi/mb-cli/releases/download/v0.1.2/mb-cli_Darwin_x86_64.tar.gz"
+      sha256 "98d240ffecb2105467f7249a2b70731898152f30a5817d266787d5c9f2b39615"
 
       define_method(:install) do
         bin.install "mb-cli"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/andreagrandi/mb-cli/releases/download/v0.1.1/mb-cli_Darwin_arm64.tar.gz"
-      sha256 "16fe119694385fa936e16999ea5557a65008f9c79b480fbefe4171074bddecc1"
+      url "https://github.com/andreagrandi/mb-cli/releases/download/v0.1.2/mb-cli_Darwin_arm64.tar.gz"
+      sha256 "0d77595001944dea0b47e977e36b128cbd828305f936d55c4897504f7a7811e6"
 
       define_method(:install) do
         bin.install "mb-cli"
@@ -29,15 +29,15 @@ class MbCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/andreagrandi/mb-cli/releases/download/v0.1.1/mb-cli_Linux_x86_64.tar.gz"
-      sha256 "f8340c1c808f619c28f715e4f7f249f256268dfa46a469f22051a475708bb741"
+      url "https://github.com/andreagrandi/mb-cli/releases/download/v0.1.2/mb-cli_Linux_x86_64.tar.gz"
+      sha256 "60e412527a24047930ddba21a4375a7163bc69b433e8c045ab32ac5f2f82d616"
       define_method(:install) do
         bin.install "mb-cli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/andreagrandi/mb-cli/releases/download/v0.1.1/mb-cli_Linux_arm64.tar.gz"
-      sha256 "896893725c546c84da552a747d6360ea3ccc1f26c556537d2899e126e83a407d"
+      url "https://github.com/andreagrandi/mb-cli/releases/download/v0.1.2/mb-cli_Linux_arm64.tar.gz"
+      sha256 "538bf884c570fce1eb93bd656b66db2a0a09040f4e5a84447484f0c490dfe6ab"
       define_method(:install) do
         bin.install "mb-cli"
       end
