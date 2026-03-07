@@ -5,23 +5,23 @@
 class Sentire < Formula
   desc "Sentire - A CLI tool for the Sentry API"
   homepage "https://github.com/andreagrandi/sentire"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/andreagrandi/sentire/releases/download/v0.2.0/sentire_Darwin_x86_64.tar.gz"
-      sha256 "81855b87f9400ebc9596b94da7b08c960e95b15ecb94e7b3941e9774e92ddba0"
+      url "https://github.com/andreagrandi/sentire/releases/download/v0.3.0/sentire_Darwin_x86_64.tar.gz"
+      sha256 "4ab6b7228edb044326dd9a00494a436893db19780f143ef6388b58b5e0a31c1f"
 
-      def install
+      define_method(:install) do
         bin.install "sentire"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/andreagrandi/sentire/releases/download/v0.2.0/sentire_Darwin_arm64.tar.gz"
-      sha256 "69a58af87d37557c8dede66461dd737a7bdc159fa1ad41334e9c8486ff33df56"
+      url "https://github.com/andreagrandi/sentire/releases/download/v0.3.0/sentire_Darwin_arm64.tar.gz"
+      sha256 "fd0d04049f1d476995f0f804d1a6d62443f683f94d9c8adbcd1df193815af96a"
 
-      def install
+      define_method(:install) do
         bin.install "sentire"
       end
     end
@@ -29,16 +29,16 @@ class Sentire < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/andreagrandi/sentire/releases/download/v0.2.0/sentire_Linux_x86_64.tar.gz"
-      sha256 "0cd48d76b7fbfbb32db73ad0f90c90cbfa4640647a121618e509ae2723118719"
-      def install
+      url "https://github.com/andreagrandi/sentire/releases/download/v0.3.0/sentire_Linux_x86_64.tar.gz"
+      sha256 "3d411901cc309891eadb386e9adb8ec806d1d3d6a07817e7e788ff12d603cd8e"
+      define_method(:install) do
         bin.install "sentire"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/andreagrandi/sentire/releases/download/v0.2.0/sentire_Linux_arm64.tar.gz"
-      sha256 "547e45d841c9f18848a9e9fbc4d7bcb9172fff31b5594e1516ba4c92cb3caa93"
-      def install
+      url "https://github.com/andreagrandi/sentire/releases/download/v0.3.0/sentire_Linux_arm64.tar.gz"
+      sha256 "372e696f6b53c093d830a6f9ebafd6ef26e61bea5f6eb7404679de4a9e99ecfc"
+      define_method(:install) do
         bin.install "sentire"
       end
     end
