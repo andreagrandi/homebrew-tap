@@ -5,21 +5,21 @@
 class Logbasset < Formula
   desc "LogBasset - A tool for querying and tailing logs"
   homepage "https://github.com/andreagrandi/logbasset"
-  version "0.4.8"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/andreagrandi/logbasset/releases/download/v0.4.8/logbasset_Darwin_x86_64.tar.gz"
-      sha256 "1a931c77df63905c100bb765dda3352a58618242eb9001234401dce148618aa4"
+      url "https://github.com/andreagrandi/logbasset/releases/download/v0.5.0/logbasset_Darwin_x86_64.tar.gz"
+      sha256 "0f9e539f2f10295f5155dfe4ae55e87be8c87a74b4f4213ab38e82164ae48ef3"
 
       define_method(:install) do
         bin.install "logbasset"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/andreagrandi/logbasset/releases/download/v0.4.8/logbasset_Darwin_arm64.tar.gz"
-      sha256 "f00106772f1e07b3f12cc02e1c31e3565e280151150c233ce596d76b9f15c40e"
+      url "https://github.com/andreagrandi/logbasset/releases/download/v0.5.0/logbasset_Darwin_arm64.tar.gz"
+      sha256 "c1d2463efa27b6625c29940762c425bd6e2d20f29fc0c6ef19e946543dcb6caf"
 
       define_method(:install) do
         bin.install "logbasset"
@@ -29,15 +29,15 @@ class Logbasset < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/andreagrandi/logbasset/releases/download/v0.4.8/logbasset_Linux_x86_64.tar.gz"
-      sha256 "0933b605494bae7832e8008138e8d19bd894c791334a84fc597543f3f9f1b9a1"
+      url "https://github.com/andreagrandi/logbasset/releases/download/v0.5.0/logbasset_Linux_x86_64.tar.gz"
+      sha256 "dd6a4055e0fcaf0cbbfd36282bb63bd9a4cc605cd61150cbb40f54e11ec47b85"
       define_method(:install) do
         bin.install "logbasset"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/andreagrandi/logbasset/releases/download/v0.4.8/logbasset_Linux_arm64.tar.gz"
-      sha256 "55809bf73c2b7eed95b9e085e445cc11914820521cb3dd3a9dfffa82d1665948"
+      url "https://github.com/andreagrandi/logbasset/releases/download/v0.5.0/logbasset_Linux_arm64.tar.gz"
+      sha256 "503548135e22c4c9eebb06d78db6a907290317576ac2912c73f6a77aa9c2252d"
       define_method(:install) do
         bin.install "logbasset"
       end
@@ -46,5 +46,7 @@ class Logbasset < Formula
 
   test do
     system "#{bin}/logbasset --version"
+    system "#{bin}/logbasset --help"
+    system "#{bin}/logbasset schema"
   end
 end
