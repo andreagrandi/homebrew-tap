@@ -7,8 +7,8 @@ class Draftomen < Formula
 
   desc "Unofficial Quick Draft assistant for MTG Arena"
   homepage "https://github.com/andreagrandi/draftomen"
-  url "https://files.pythonhosted.org/packages/7b/f5/6a738ef3b3432d040ba72d794f3b30d0f07ce13c9b4d81ff933add8180be/draftomen-0.3.0.tar.gz"
-  sha256 "9f49922ed3af5bf945694f6b8ff19348ad6273b05ceae6c6eeedf0f6c28f3d01"
+  url "https://files.pythonhosted.org/packages/72/d0/d97ca614eb7fdceca6bc62d3fab571978bae09fcb3cf7afbdc7695ac67e6/draftomen-0.3.1.tar.gz"
+  sha256 "eaf0d3c4cd83b1019606e58903fa4cdbf63e0dea999699d94e259d4454ca1899"
   license "MIT"
 
   depends_on "pillow"
